@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-home {
+    margin-top: 100px;
+    position: relative;
+}
+
+.image {
+    margin: auto;
+    width: 500px;
+    position: relative;   
+}
+
+.main-icon {
+    width: 100%;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big-text {
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 4em;
+}
+
+.info-container .big-text {
+    color: #8ADC63;
+}
+
+.sub-title {
+    color: #A1A1A1;
+    font-family: 'Poppins';
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.social .icon {
+    color: #A1A1A1;
+    margin-top: 10px;
+}
+
+.icon:hover {
+    color: #00D1FF;
+    transform: scale(1.2);
+}
+
+.icon {
+    padding: 10px;
+}
+
+.nav {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 700px;
+}
+
+.nav-top, .nav-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-top {
+    margin-bottom: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: #a1a1a1;
+    font-family: 'Poppins';
+    font-size: 1.5em;
+    position: relative;
+}
+
+.link:hover {
+    color: #00D1FF;
+    transform: scale(1.2);
+} 
+
+.hand {
+    width: 135px;
+    position: absolute;
+    top: -22px;
+    left: 54%;
+    transform: translate(-50%);
+}
+.hand-mobile {
+    display: none;
+}
+
+#hand:hover {
+    visibility: visible;
+} 
+
+.nav:hover .hand {
+    visibility: hidden;
+}
+
+.nav-1:hover::before {
+    content: url(../images/puntatore.png);
+    position: absolute;
+    top: -140px;
+    left: 55px;
+    transform: scale(0.45) rotate(-70deg);
+}
+
+.nav-2:hover::before {
+    content: url(../images/puntatore.png);
+    position: absolute;
+    top: -150px;
+    left: 100px;
+    transform: scale(0.45) rotate(-80deg);
+}
+
+.nav-3:hover::before {
+    content: url(../images/puntatore.png);
+    position: absolute;
+    top: -150px;
+    left: -230px;
+    transform: scale(0.45) rotate(40deg);
+}
+
+.nav-4:hover::before {
+    content: url(../images/puntatore.png);
+    position: absolute;
+    top: -170px;
+    left: -240px;
+    transform: scale(0.45) rotate(50deg);
+}
+
+
+
+/* SKILLS */
+
+.title {
+    color: #A1A1A1;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 3em;
+    text-align: center;
+}
+
+.box-skills {
+    max-width: 1300px;
+    width: 95%;
+    margin: 160px auto 0 auto;
+}
+
+.box-skills img {
+    width: 100%;
+}
+
+.box-skills .sub-title {
+    text-align: center;
+    padding: 20px;
+}
+
+.skills {
+    color: #A1A1A1;
+    text-align: center;
+}
+
+.skills span {
+    color: #00D1FF;
+}
+
+.arte, .grafica, .web {
+    position: relative;
+    /* border: tomato solid 2px; */
+    margin: 50px 0;
+}
+
+.desc {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+}
+
+.desc p, ul {
+    color: #A1A1A1;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.left {
+    left: 5%;
+}
+
+.right {
+    text-align: right;
+    right: 5%;
+}
+
+.web ul {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Poppins';
+    color: #00D1FF;
+    font-size: 1.9em;
+    margin-bottom: 15px;
+}
+
+.blu {
+    color: #00D1FF;
+}
+
+.link-p:link {
+    text-decoration: none;
+    color: #00D1FF;
+}
+.link-p:visited {
+    text-decoration: none;
+    color: #888888;
+}
+.link-p:hover {
+    text-decoration: none;
+    color: #00D1FF;
+}
+.link-p:active {
+    text-decoration: none;
+    color: #00D1FF;
+}
+
+
+
+/*  PORTFOLIO  */
+
+.box-portfolio {
+    width: 100%;
+    margin: auto;
+}
+
+.box-portfolio .title {
+    margin-top: 80px;
+}
+
+.portfolio {
+    margin-bottom: 50px;
+}
+
+.box-lp {
+    background: #EEFDFF;
+    width: 100%;
+    height: 250px;
+    margin: 50px auto 0 auto;
+}
+.anteprime {
+    /* border: fuchsia solid 2px; */
+    width: 90%;
+    max-width: 1300px;
+    height: 250px;
+    display: flex;
+    margin: auto;
+}
+.link-anteprima {
+    background: #f1f1f1;
+    height: 90%;
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.link-anteprima::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: 'none';
+    visibility: hidden;
+    font-family: 'Poppins';
+    color: #00D1FF;
+}
+
+.link-anteprima:hover::after {
+    visibility: visible;
+}
+
+.link-anteprima:hover {
+    background: rgba(255, 255, 255, 0.616);
+}
+.anteprime p {
+    font-family: 'Poppins';
+    color: #A1A1A1;
+    font-size: 1em;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    padding: 10px;
+    opacity: 0;
+}
+
+/*   CONTATTI   */
+
+.box-contatti {
+    width: 100%;
+}
+.box-contatti .title {
+    margin-top: 80px;
+}
+.background-contatti {
+    border-radius: 30px;
+    background: #EEFDFF;
+    max-width: 1300px;
+    width: 90%;
+    height: 200px;
+    margin: 50px auto 50px auto;
+    display: flex;
+    align-items: center;
+}
+
+.background-contatti h3 {
+    padding: 20px;
+}
+.contact-content {
+    margin: auto;
+}
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.email h2 {
+    padding: 0;
+    padding-right: 20px;
+    margin: 0;
+}
+.email p {
+    color: #00D1FF;
+    font-family: 'Poppins';
+}
+.email-link:link {
+    color: #00D1FF;
+    text-decoration: none;
+}
+.email-link:visited {
+    color: #A1A1A1;
+}
+.email-link:hover {
+    color: #8ADC63;
+}
+.email-link:active {
+    color: chartreuse;
+}
+.icon-email {
+    color: #A1A1A1;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* back to home button */
+
+.up {
+    background: white;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 5px 5px 10px rgba(0, 143, 199, 0.198);
+}
+
+.up-icon {
+    color: #00D1FF;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .big-text {
+        font-size: 3em;
+    }
+    .desc {
+      width: 60%;
+    }
+    .left {
+        left: 30px;
+    }
+    .right {
+        right: 30px;
+    }
+    h2 {
+        margin-bottom: 5px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+
+    .desc {
+        width: 90%;
+    }
+    .left {
+        left: 20px;
+    }
+    .right {
+        right: 20px;
+    }
+    .box-skills img {
+        opacity: 0.5;
+    }
+  }
+
+
+
+  @media screen and (max-width: 730px) {
+      .container-home {
+          width: 90%;
+          margin-top: 25%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+      }
+      .info-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        }
+      .hand {
+          display: none;
+      }
+    .image {
+        position: relative;
+        width: 80%;
+    }
+    .hand-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .nav {
+        display: block;
+        margin-top: -30px;
+        width: 80vw;
+        position: static;
+        transform: translateX(0);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .link {
+        font-size: 1.3em;
+        padding-bottom: 20px;
+    }
+    .nav-top {
+        margin-bottom: 0px;
+    }
+    .big-text {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 3em;
+        line-height: 50px;
+    }
+    .sub-title {
+        margin: 20px;
+        font-size: 1.2em;
+    }
+    .title {
+        font-size: 2.5em;
+        line-height: 40px;
+    }
+
+    .box-skills {
+        overflow: hidden;
+        width: 100%;
+    }
+    .box-skills .sub-title {
+        margin: 0;
+    }
+    .arte img, .web img {
+        width: 70%;
+        opacity: 1;
+        min-width: 150px;
+        position: absolute;
+        left: -20px;
+    }
+    .grafica img {
+        width: 70%;
+        position: absolute;
+        right: -20px;
+        opacity: 1;
+    }
+    #title-right {
+        width: 100%;
+        padding-right: 7%;
+        text-align: right;
+    }
+    .nav-1:hover::before,
+    .nav-2:hover::before,
+    .nav-3:hover::before,
+    .nav-4:hover::before {
+        content: url(/assets/images/mano-puntatore.png);
+        display: none;
+    }
+   .arte, .grafica, .web {
+        position: relative;
+        height: 250px;
+        margin: 0;
+   }
+   .desc {
+       position: absolute;
+       left: 0;
+       width: 100%;
+       height: 100%;
+   }
+   .title-mobile {
+       height: 35%;
+       margin-left: 20px;
+       display: flex;
+       align-items: center;
+   }
+   .desc p {
+        margin: 2% 20% 2% 5%;
+   }
+   .desc h2 {
+       width: 50%;
+       line-height: 25px;
+   }
+   .right p {
+       text-align: right;
+       margin: 2% 5% 2% 10%;
+   }
+   .web ul {
+       margin-left: 20px;
+   }
+   .box-lp {
+        display: flex;
+        flex-direction: column;
+   }
+   .anteprime {
+        width: 100%;
+        height: 100%;
+   }
+   .link-anteprima p {
+       opacity: 0;
+   }
+   .port-subtitle {
+       margin: 20px auto 0 auto;
+   }
+   .email {
+       display: flex;
+       flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 500px) {
+    .title-mobile {
+        height: 30%;
+    }
+    .arte, .grafica, .web {
+        height: 300px;
+    }
+    .desc p {
+        margin: 5%;
+    }
+    .box-skills h2 {
+        width: 50%;
+        margin-top: 2%;
+    }
+    .box-skills img {
+        width: 100%;
+        opacity: 1;
+    }
+}
