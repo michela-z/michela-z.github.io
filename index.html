@@ -16,21 +16,24 @@
             <img src="assets/images/icona.jpg" alt="icon" class="main-icon">
             <img src="assets/images/mano-mobile.png" alt="hand" class="hand-mobile">
         </div>
+        
+        <div class="menu-btn">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
 
-        <nav class="nav">
-            
+        <nav class="nav" id="navbar">
+            <div class="cancel-btn">
+                <i class="fas fa-times fa-2x"></i>
+            </div>
             <div class="nav-top">
             <a href="#lavori" class="nav-1 link">Lavori</a>
             <a href="#skill" class="nav-3 link">Skills</a>
             </div>
-
             <div class="nav-bottom">
             <a href="#progetti" class="nav-2 link">Progetti <br> personali</a>
-            <a href="#contatti" class="nav-4 link">Contatti</a>
+            <a href="contact/index.html" class="nav-4 link">Contatti</a>
             </div>
-
             <img src="assets/images/mano.png" alt="hand" class="hand" id="hand">
-
         </nav>
 
         <div class="info-container">
@@ -40,7 +43,7 @@
                 <a href="https://www.instagram.com/michelazallocco/"><i class="fab fa-instagram icon fa-2x"></i></a>
                 <a href="https://github.com/michela-z"><i class="fab fa-github icon fa-2x"></i></a>
                 <a href="https://www.linkedin.com/in/michela-zallocco-a30b531a1/"><i class="fab fa-linkedin icon fa-2x"></i></a>
-                <a href="mailto:michelazallocco@outlook.it"><i class="far fa-at icon fa-2x"></i></a>
+                <a href="/contact/index.html"><i class="far fa-at icon fa-2x"></i></a>
             </div>
         </div>
 
@@ -89,11 +92,12 @@
                 </div>
 
                 <p>Una riscoperta passione per l’informatica, maturata fin da piccola, sommata all’interesse per la grafica digitale, ha fatto si che mi appassionassi alla programmazione, in particolare allo <b>sviluppo di siti web</b> .</p>
-                <ul>
-                    <li>html, css</li>
-                </ul>
-
             </div>
+        </div>
+
+        <div class="skill-list">
+            <h3>Skills</h3>
+            <p>HTML CSS</p>
         </div>
 
     </div>
@@ -119,16 +123,16 @@
 
         <h1 id="lavori" class="title portfolio"><span class="blu">Lavori</span>.</h1>
 
-            <div class="box-lp">
-                <div class="anteprime">
-                    <div class="link-anteprima">
-                        <p>Apri</p>
-                    </div>
-                    <div class="link-anteprima">
-                        <p>Apri</p>
-                    </div>
+        <div class="box-lp">
+            <div class="anteprime">
+                <div class="link-anteprima">
+                    <p>Apri</p>
+                </div>
+                <div class="link-anteprima">
+                    <p>Apri</p>
                 </div>
             </div>
+        </div>
     </div>
 
     <div class="box-contatti">
@@ -137,14 +141,12 @@
             
         <div class="background-contatti">
             <div class="contact-content">
-                <div class="email">
-                    <h2>Email</h2>
-                    <p><a href="mailto:michelazallocco@outlook.it" class="email-link"> michelazallocco@outlook.it</a></p>
-                </div>
+
                 <div class="social">
                     <a href="https://www.instagram.com/michelazallocco/"><i class="fab fa-instagram icon fa-2x"></i></a>
                     <a href="https://github.com/michela-z"><i class="fab fa-github icon fa-2x"></i></a>
                     <a href="https://www.linkedin.com/in/michela-zallocco-a30b531a1/"><i class="fab fa-linkedin icon fa-2x"></i></a>
+                    <a href="/contact/index.html"><i class="far fa-at icon fa-2x"></i></a>
                 </div>
             </div>    
 
@@ -155,6 +157,23 @@
     <div class="up">
         <a href="#home"><i class="fas fa-chevron-up fa-2x up-icon"></i></a>
     </div>
+
+    <script>
+        const navbar = document.querySelector("#navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+        }
+        cancelBtn.onclick = ()=>{
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
 
 </body>
 

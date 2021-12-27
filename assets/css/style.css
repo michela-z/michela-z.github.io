@@ -68,6 +68,11 @@ body {
     padding: 10px;
 }
 
+.menu-btn {
+    display: none;
+.cancel-btn {
+    display: none;
+}
 .nav {
     position: absolute;
     top: 40%;
@@ -214,11 +219,6 @@ body {
     right: 5%;
 }
 
-.web ul {
-    padding-left: 20px;
-    font-weight: bold;
-}
-
 h2 {
     font-family: 'Poppins';
     color: #00D1FF;
@@ -245,6 +245,27 @@ h2 {
 .link-p:active {
     text-decoration: none;
     color: #00D1FF;
+}
+
+/* SKILLS */
+
+.skill-list {
+    border-radius: 15px;
+    background: #EEFDFF;
+    width: 100%;
+    margin: auto;
+    padding: 10px 0 10px 5%;
+}
+.skill-list h3 {
+    font-family: 'Poppins';
+    font-size: 1.5em;
+    color: #00D1FF;
+    font-weight: 600;
+}
+.skill-list p {
+    font-family: 'Poppins';
+    color: #A1A1A1;
+    word-spacing: 10px;
 }
 
 
@@ -328,7 +349,7 @@ h2 {
     background: #EEFDFF;
     max-width: 1300px;
     width: 90%;
-    height: 200px;
+    height: 150px;
     margin: 50px auto 50px auto;
     display: flex;
     align-items: center;
@@ -339,20 +360,6 @@ h2 {
 }
 .contact-content {
     margin: auto;
-}
-.email {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.email h2 {
-    padding: 0;
-    padding-right: 20px;
-    margin: 0;
-}
-.email p {
-    color: #00D1FF;
-    font-family: 'Poppins';
 }
 .email-link:link {
     color: #00D1FF;
@@ -406,7 +413,7 @@ h2 {
         font-size: 3em;
     }
     .desc {
-      width: 60%;
+        width: 60%;
     }
     .left {
         left: 30px;
@@ -417,9 +424,9 @@ h2 {
     h2 {
         margin-bottom: 5px;
     }
-  }
+}
 
-  @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
 
     .desc {
         width: 90%;
@@ -433,28 +440,28 @@ h2 {
     .box-skills img {
         opacity: 0.5;
     }
-  }
+}
 
 
 
-  @media screen and (max-width: 730px) {
-      .container-home {
-          width: 90%;
-          margin-top: 25%;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
-      }
-      .info-container {
+@media screen and (max-width: 730px) {
+    .container-home {
+        width: 90%;
+        margin-top: 25%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-container {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         }
-      .hand {
-          display: none;
-      }
+    .hand {
+        display: none;
+    }
     .image {
         position: relative;
         width: 80%;
@@ -466,19 +473,58 @@ h2 {
         left: 0;
         width: 100%;
     }
-    .nav {
+    .menu-btn {
         display: block;
-        margin-top: -30px;
-        width: 80vw;
-        position: static;
+        color: #00D1FF;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 2;
+    }
+    .cancel-btn {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 100px;
+        z-index: 2;
+    }
+    #navbar.sticky {
+        display: none;
+    }
+    .nav {
+        background-color: #00d0ffea;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
         transform: translateX(0);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+        z-index: 1;
+        visibility: hidden;
+    }
+    .nav.show {
+        transition: ease-in 0.2s;
+        visibility: visible;
+    }
+    .nav-top, .nav-bottom {
+        display: flex;
+        flex-direction: column;
     }
     .link {
         font-size: 1.3em;
-        padding-bottom: 20px;
+        color: white;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .link:hover {
+        color: white;
+        transform: scale(1);
     }
     .nav-top {
         margin-bottom: 0px;
@@ -530,55 +576,55 @@ h2 {
         content: url(/assets/images/mano-puntatore.png);
         display: none;
     }
-   .arte, .grafica, .web {
+    .arte, .grafica, .web {
         position: relative;
         height: 250px;
         margin: 0;
-   }
-   .desc {
-       position: absolute;
-       left: 0;
-       width: 100%;
-       height: 100%;
-   }
-   .title-mobile {
-       height: 35%;
-       margin-left: 20px;
-       display: flex;
-       align-items: center;
-   }
-   .desc p {
-        margin: 2% 20% 2% 5%;
-   }
-   .desc h2 {
-       width: 50%;
-       line-height: 25px;
-   }
-   .right p {
-       text-align: right;
-       margin: 2% 5% 2% 10%;
-   }
-   .web ul {
-       margin-left: 20px;
-   }
-   .box-lp {
-        display: flex;
-        flex-direction: column;
-   }
-   .anteprime {
+    }
+    .desc {
+        position: absolute;
+        left: 0;
         width: 100%;
         height: 100%;
-   }
-   .link-anteprima p {
-       opacity: 0;
-   }
-   .port-subtitle {
-       margin: 20px auto 0 auto;
-   }
-   .email {
-       display: flex;
-       flex-direction: column;
-   }
+    }
+    .title-mobile {
+        height: 35%;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .desc p {
+        margin: 2% 20% 2% 5%;
+    }
+    .desc h2 {
+        width: 50%;
+        line-height: 25px;
+    }
+    .right p {
+        text-align: right;
+        margin: 2% 5% 2% 10%;
+    }
+    .skill-list {
+        width: 90%;
+    }
+    .box-lp {
+        display: flex;
+        flex-direction: column;
+    }
+    .anteprime {
+        width: 100%;
+        height: 100%;
+    }
+    .link-anteprima p {
+        opacity: 0;
+    }
+    .port-subtitle {
+        margin: 20px auto 0 auto;
+    }
+    .email {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 500px) {
