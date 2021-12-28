@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Contact Form</title>
     <link rel="stylesheet" href="../assets/css/contactForm.css">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
     (function() {
@@ -29,30 +34,72 @@
 </head>
 
 <body>
-    <h1>Contatti</h1>
-    <div class="form-container">
-        <form id="contact-form" class="contact-form">
 
-            <input type="hidden" name="contact_number">
-
-            <div class="name">
-                <label>Name</label>
-                <input type="text" name="name">
-            </div>
-
-            <div class="email">
-            <label>Email</label>
-            <input type="email" name="user_email">
-            </div>
-
-            <div class="text">
-            <label>Message</label>
-            <textarea name="message"></textarea>
-            </div>
-
-            <input type="submit" value="Invia" id="btn-submit">
-
-        </form>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
     </div>
+
+    <a href="/index.html"><img src="/assets/images/icona.jpg" alt="icon" class="nav-icon"></a>
+
+    <nav class="navbar">
+
+        <div class="cancel-btn">
+            <i class="fas fa-times fa-2x"></i>
+        </div>
+
+        <a href="/index.html"><img src="/assets/images/icona.jpg" alt="icon"></a>
+        <ul>
+            <a href="/index.html"><li class="link">Home</li></a>
+            <a href="/lavori/index.html"><li class="link">Lavori</li></a>
+            <a href="/progetti/"><li class="link">Progetti Personali</li></a>
+            <a href="index.html"><li class="link">Skills</li></a>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <h1>Contatti</h1>
+        <div class="form-container">
+            <form id="contact-form" class="contact-form">
+
+                <input type="hidden" name="contact_number">
+
+                <div class="name">
+                    <label>Name</label>
+                    <input type="text" name="name">
+                </div>
+
+                <div class="email">
+                <label>Email</label>
+                <input type="email" name="user_email">
+                </div>
+
+                <div class="text">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+                </div>
+
+                <input type="submit" value="Invia" id="btn-submit">
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+        }
+        cancelBtn.onclick = ()=>{
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
+
 </body>
 </html>

@@ -39,19 +39,6 @@ ul a {
     font-family: 'Poppins';
 }
 
-/* PULSANTI NAVBAR */
-
-.menu-btn {
-    display: none;
-}
-.cancel-btn {
-    display: none;
-}
-
-
-/* CONTENUTO PAGINA */
-
-
 h1 {
     font-family: 'Poppins';
     color: #00D1FF;
@@ -61,74 +48,9 @@ h1 {
     text-align: center;
 }
 
-.form-container {
-    margin: auto;
-    padding: 70px;
-    border-radius: 30px;
-    background: #EEFDFF;
-    margin-top: 50px;
-    width: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-container div {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding-bottom: 10px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 250px;
-}
-
-label {
-    font-family: 'Poppins';
-    color: #A1A1A1;
-    padding: 10px;    
-}
-
-input, textarea {
-    border: #A1A1A1;
-    border-radius: 5px;
-    height: 30px;
-    padding-inline-start: 10px;
-}
-
-textarea {
-    height: 100px;
-}
-
-#btn-submit {
-    border: none;
-    border-radius: 50px;
-    background-color: #A1A1A1;
-    width: 100px;
-    color: white;
-    margin: 50px auto 0 auto;
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: 1.2em;
-    padding-inline-start: 0;
-    width: 120px;
-    height: 40px;
-}
-
-#btn-submit:hover {
-    background-color: #00D1FF;
-}
-
 @media screen and (max-width: 650px) {
     .main-container {
         padding-top: 50px;
-    }
-    .form-container {
-        width: 90%;
     }
 
     /* NAVBAR */
@@ -188,14 +110,5 @@ textarea {
     .navbar.show {
         transition: ease-in 0.2s;
         visibility: visible;
-    }
-}
-@media screen and (max-width: 400px) {
-    .form-container {
-        height: 500px;
-    }
-    .name, .email, .text {
-        display: flex;
-        flex-direction: column;
     }
 }

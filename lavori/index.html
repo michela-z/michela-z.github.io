@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/lavori.css">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <title>Lavori</title>
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+
+    <a href="/index.html"><img src="/assets/images/icona.jpg" alt="icon" class="nav-icon"></a>
+
+    <nav class="navbar">
+
+        <div class="cancel-btn">
+            <i class="fas fa-times fa-2x"></i>
+        </div>
+
+        <img src="/assets/images/icona.jpg" alt="icon">
+        <ul>
+            <a href="/index.html"><li class="link">Home</li></a>
+            <a href="/progetti/index.html"><li class="link">Progetti Personali</li></a>
+            <a href="/index.html"><li class="link">Skills</li></a>
+            <a href="/contact/index.html"><li class="link">Contatti</li></a>
+        </ul>
+    </nav>
+
+
+    <div class="main-container">
+    <h1>Lavori</h1>
+    </div>
+
+
+
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+        }
+        cancelBtn.onclick = ()=>{
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
+
+</body>
+</html>
