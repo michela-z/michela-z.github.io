@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contatti</title>
     
-    <title>Contact Form</title>
     <link rel="stylesheet" href="../assets/css/contactForm.css">
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -19,15 +20,14 @@
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
                 emailjs.sendForm('contact_service', 'contact_form', this)
                     .then(function() {
-                        console.log('SUCCESS!');
+                        alert('Email inviata con successo!');
                     }, function(error) {
-                        console.log('FAILED...', error);
+                        alert('Invio email non riuscito...', error);
                     });
+                event.target.reset();
             });
         }
     </script>

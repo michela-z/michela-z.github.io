@@ -9,6 +9,18 @@
 
 /*   NAVBAR   */
 
+.nav-icon {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.cancel-btn {
+    display: none;
+}
+
 .navbar img {
     width: 70px;
 }
@@ -37,6 +49,11 @@ ul a {
     padding-right: 30px;
     color: #A1A1A1;
     font-family: 'Poppins';
+    font-size: 1.2em;
+}
+
+.link:hover {
+    color: #00D1FF;
 }
 
 h1 {
@@ -58,6 +75,7 @@ h1 {
         visibility: hidden;
     }
     .nav-icon {
+        display: block;
         width: 70px;
         position: fixed;
         top: 15px;
