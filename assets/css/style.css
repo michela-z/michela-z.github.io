@@ -60,6 +60,7 @@ a {
     font-family: 'Poppins';
     font-size: 1.5em;
     font-weight: 400;
+    text-align: center;
 }
 
 .social .icon {
@@ -290,8 +291,14 @@ h2 {
     margin-top: 80px;
 }
 
+.box-portfolio .sub-title {
+    font-size: 1.2em;
+}
+.box-portfolio .sub-title:hover {
+    color: #00D1FF;
+}
 .portfolio {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .box-lp {
