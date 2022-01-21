@@ -31,7 +31,7 @@ a {
 .image {
     margin: auto;
     width: 500px;
-    position: relative;   
+    position: relative;
 }
 
 .main-icon {
@@ -88,7 +88,7 @@ a {
     top: 40%;
     left: 50%;
     transform: translateX(-50%);
-    
+
     width: 700px;
 }
 
@@ -112,7 +112,7 @@ a {
 .link:hover {
     color: #00D1FF;
     transform: scale(1.2);
-} 
+}
 
 .hand {
     width: 135px;
@@ -127,7 +127,7 @@ a {
 
 #hand:hover {
     visibility: visible;
-} 
+}
 
 .nav:hover .hand {
     visibility: hidden;
@@ -203,7 +203,6 @@ a {
 
 .arte, .grafica, .web {
     position: relative;
-    /* border: tomato solid 2px; */
     margin: 50px 0;
 }
 
@@ -308,22 +307,57 @@ h2 {
     margin: 50px auto 0 auto;
 }
 .anteprime {
-    /* border: fuchsia solid 2px; */
     width: 90%;
     max-width: 1300px;
     height: 250px;
     display: flex;
     margin: auto;
 }
+
 .link-anteprima {
     background: #f1f1f1;
     height: 90%;
     width: 50%;
     margin: auto;
     position: relative;
+    overflow: hidden;
 }
 
-.link-anteprima::after {
+.img-anteprima {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.etichetta {
+    position: absolute;
+    font-family: 'Poppins';
+    top: 80px;
+    left: 50%;
+    transform: translatex(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00D1FF;
+    z-index: 2;
+    text-align: center;
+    visibility: hidden;
+}
+
+.etichetta a {
+    font-weight: lighter;
+}
+
+.etichetta a:visited{
+    color: #00D1FF;
+}
+
+.etichetta a:hover{
+    color: white;
+}
+
+.none::after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -339,18 +373,10 @@ h2 {
 }
 
 .link-anteprima:hover {
-    background: rgba(255, 255, 255, 0.616);
+    transition: .3s ease-in-out;
+    background: rgba(255, 255, 255, 0.493);
 }
-.anteprime p {
-    font-family: 'Poppins';
-    color: #A1A1A1;
-    font-size: 1em;
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-    padding: 10px;
-    opacity: 0;
-}
+
 
 /*   CONTATTI   */
 

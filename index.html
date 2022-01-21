@@ -110,12 +110,17 @@
         
             <div class="box-lp">
                 <div class="anteprime">
+
                     <div class="link-anteprima">
-                        <p>Apri</p>
+                        <img src="/assets/images/portfolio-progetto-1.jpg" alt="" class="img-anteprima">
+                        <p class="etichetta">Sito Personale <br>
+                        <a href="/index.html">Apri</a>
+                        </p>
                     </div>
-                    <div class="link-anteprima">
-                        <p>Apri</p>
+
+                    <div class="link-anteprima none">
                     </div>
+
                 </div>
             </div>
         
@@ -128,11 +133,9 @@
 
         <div class="box-lp">
             <div class="anteprime">
-                <div class="link-anteprima">
-                    <p>Apri</p>
+                <div class="link-anteprima none">
                 </div>
-                <div class="link-anteprima">
-                    <p>Apri</p>
+                <div class="link-anteprima none">
                 </div>
             </div>
         </div>
@@ -176,6 +179,24 @@
         window.onscroll = ()=>{
             this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
         }
+
+        // mouse sulle anteprime 
+        let anteprima = document.querySelector('.img-anteprima');
+        let etichettaAntep = document.querySelector('.etichetta');
+
+        anteprima.addEventListener('mouseover', function() {
+            etichettaAntep.style.visibility = 'visible';
+            anteprima.style.filter = 'blur(3px)';
+        })
+        anteprima.addEventListener('mouseleave', function() {
+            etichettaAntep.style.visibility = 'hidden';
+            anteprima.style.filter = 'blur(0px)';
+        })
+        etichettaAntep.addEventListener('mouseover', function() {
+            etichettaAntep.style.visibility = 'visible';
+            anteprima.style.filter = 'blur(3px)';
+        })
+
     </script>
 
 </body>
