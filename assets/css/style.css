@@ -658,7 +658,8 @@ h2 {
         height: 100%;
     }
     .link-anteprima p {
-        opacity: 0;
+        top: 60px;
+        opacity: 1;
     }
     .port-subtitle {
         margin: 20px auto 0 auto;
