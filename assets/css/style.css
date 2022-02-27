@@ -34,6 +34,21 @@ a {
     position: relative;
 }
 
+
+/* ANIMAZIONE MANO  */
+
+.mano {
+    width: 27%;
+    position: absolute;
+    left: 39%;
+    bottom: -3%;
+    transform: rotate(-15deg);
+    transition: transform 500ms ease-in-out;
+}
+
+/* ------- */
+
+
 .main-icon {
     width: 100%;
 }
@@ -114,26 +129,26 @@ a {
     transform: scale(1.2);
 }
 
-.hand {
+/* .hand {
     width: 135px;
     position: absolute;
     top: -22px;
     left: 54%;
     transform: translate(-50%);
-}
-.hand-mobile {
+} */
+/* .hand-mobile {
     display: none;
-}
+} */
 
-#hand:hover {
+/* #hand:hover {
     visibility: visible;
 }
 
 .nav:hover .hand {
     visibility: hidden;
-}
+} */
 
-.nav-1:hover::before {
+/* .nav-1:hover::before {
     content: url(../images/puntatore.png);
     position: absolute;
     top: -140px;
@@ -163,7 +178,7 @@ a {
     top: -170px;
     left: -240px;
     transform: scale(0.45) rotate(50deg);
-}
+} */
 
 
 

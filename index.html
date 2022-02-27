@@ -15,7 +15,6 @@
 
         <div class="image">
             <img src="assets/images/icona.jpg" alt="icon" class="main-icon">
-            <img src="assets/images/mano-mobile.png" alt="hand" class="hand-mobile">
         </div>
         
         <div class="menu-btn">
@@ -34,7 +33,6 @@
             <a href="#progetti" class="nav-2 link">Progetti <br> personali</a>
             <a href="contact/index.html" class="nav-4 link">Contatti</a>
             </div>
-            <img src="assets/images/mano.png" alt="hand" class="hand" id="hand">
         </nav>
 
         <div class="info-container">
@@ -164,42 +162,7 @@
         <a href="#home"><i class="fas fa-chevron-up fa-2x up-icon"></i></a>
     </div>
 
-    <script>
-
-        // navbar 
-        const navbar = document.querySelector("#navbar");
-        const menuBtn = document.querySelector(".menu-btn");
-        const cancelBtn = document.querySelector(".cancel-btn");
-        menuBtn.onclick = ()=>{
-            navbar.classList.add("show");
-            menuBtn.classList.add("hide");
-        }
-        cancelBtn.onclick = ()=>{
-            navbar.classList.remove("show");
-            menuBtn.classList.remove("hide");
-        }
-        window.onscroll = ()=>{
-            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-        }
-
-        // mouse sulle anteprime 
-        let anteprima = document.querySelector('.img-anteprima');
-        let etichettaAntep = document.querySelector('.etichetta');
-
-        anteprima.addEventListener('mouseover', function() {
-            etichettaAntep.style.visibility = 'visible';
-            anteprima.style.filter = 'blur(3px)';
-        })
-        anteprima.addEventListener('mouseleave', function() {
-            etichettaAntep.style.visibility = 'hidden';
-            anteprima.style.filter = 'blur(0px)';
-        })
-        etichettaAntep.addEventListener('mouseover', function() {
-            etichettaAntep.style.visibility = 'visible';
-            anteprima.style.filter = 'blur(3px)';
-        })
-
-    </script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
