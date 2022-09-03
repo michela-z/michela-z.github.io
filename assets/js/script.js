@@ -2,19 +2,21 @@
 let navbar = document.querySelector("#navbar");
 const menuBtn = document.querySelector(".menu-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
-menuBtn.onclick = ()=>{
+
+menuBtn.onclick = () => {
     navbar.classList.add("show");
     menuBtn.classList.add("hide");
 }
-cancelBtn.onclick = ()=>{
+cancelBtn.onclick = () => {
     navbar.classList.remove("show");
     menuBtn.classList.remove("hide");
 }
-window.onscroll = ()=>{
+window.onscroll = () => {
     this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
 
 // mouse sulle anteprime 
+
 let anteprima = document.querySelector('.img-anteprima');
 let etichettaAntep = document.querySelector('.etichetta');
 
@@ -30,6 +32,22 @@ etichettaAntep.addEventListener('mouseover', function() {
     etichettaAntep.style.visibility = 'visible';
     anteprima.style.filter = 'blur(3px)';
 })
+
+
+let title = document.createElement('p');
+
+function over(e) {
+    let text = e.getAttribute('data-title');
+    e.style.filter = 'blur(3px)';
+    title.className = 'etichetta';
+    title.innerHTML = text;
+    e.append(title);
+    console.log(text);
+};
+
+function leave(e) {
+    e.style.filter = 'blur(0px)';
+};
 
 // MANO PUNTATORE
 let containerImage = document.querySelector('.image');
