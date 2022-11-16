@@ -17,37 +17,22 @@ window.onscroll = () => {
 
 // mouse sulle anteprime 
 
-let anteprima = document.querySelector('.img-anteprima');
-let etichettaAntep = document.querySelector('.etichetta');
+let cards = document.querySelectorAll('.card');
+const body = document.body;
 
-anteprima.addEventListener('mouseover', function() {
-    etichettaAntep.style.visibility = 'visible';
-    anteprima.style.filter = 'blur(3px)';
-})
-anteprima.addEventListener('mouseleave', function() {
-    etichettaAntep.style.visibility = 'hidden';
-    anteprima.style.filter = 'blur(0px)';
-})
-etichettaAntep.addEventListener('mouseover', function() {
-    etichettaAntep.style.visibility = 'visible';
-    anteprima.style.filter = 'blur(3px)';
-})
+cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+        removeActive()
+        card.classList.add('active')
+    })
+});
 
+const removeActive = () => {
+    cards.forEach(card => {
+        card.classList.remove('active')
+    })
+}
 
-let title = document.createElement('p');
-
-function over(e) {
-    let text = e.getAttribute('data-title');
-    e.style.filter = 'blur(3px)';
-    title.className = 'etichetta';
-    title.innerHTML = text;
-    e.append(title);
-    console.log(text);
-};
-
-function leave(e) {
-    e.style.filter = 'blur(0px)';
-};
 
 // MANO PUNTATORE
 let containerImage = document.querySelector('.image');
@@ -56,32 +41,57 @@ mano.src = 'assets/images/mano.png'
 mano.className = 'mano';
 containerImage.append(mano);
 
+//let navOne = document.querySelector('.nav-1');
 let navOne = document.querySelector('.nav-1');
 let navTwo = document.querySelector('.nav-2');
 let navThree = document.querySelector('.nav-3');
-let navFour = document.querySelector('.nav-4');
+
+let socialOne = document.querySelector('.fa-instagram');
+let socialTwo = document.querySelector('.fa-github');
+let socialThree = document.querySelector('.fa-linkedin');
+let socialFour = document.querySelector('.fa-at');
 
 
 function nullPosition() {
     mano.style.transform = null;
 }
 
+// NAV BAR LEFT     
+
 navOne.addEventListener('mouseover', function() {
-    mano.style.transform = "translateX(-180px) translateY(-10px) rotate(-70deg)" ;
+    mano.style.transform = "translateX(-180px) translateY(-50px) rotate(-50deg)" ;
 });
 navOne.addEventListener('mouseout', nullPosition);
 
 navTwo.addEventListener('mouseover', function() {
-    mano.style.transform = "translateX(-145px) translateY(55px) rotate(-70deg)" ;
+    mano.style.transform = "translateX(-150px) translateY(10px) rotate(-60deg)" ;
 });
 navTwo.addEventListener('mouseout', nullPosition);
 
 navThree.addEventListener('mouseover', function() {
-    mano.style.transform = "translateX(150px) translateY(-30px) rotate(40deg)" ;
+    mano.style.transform = "translateX(-120px) translateY(50px) rotate(-70deg)" ;
 });
 navThree.addEventListener('mouseout', nullPosition);
 
-navFour.addEventListener('mouseover', function() {
-    mano.style.transform = "translateX(110px) translateY(30px) rotate(40deg)" ;
+
+// NAV BAR RIGHT
+
+socialOne.addEventListener('mouseover', function() {
+    mano.style.transform = "translateX(140px) translateY(-90px) rotate(30deg)" ;
 });
-navFour.addEventListener('mouseout', nullPosition);
+socialOne.addEventListener('mouseout', nullPosition);
+
+socialTwo.addEventListener('mouseover', function() {
+    mano.style.transform = "translateX(140px) translateY(-50px) rotate(35deg)" ;
+});
+socialTwo.addEventListener('mouseout', nullPosition);
+
+socialThree.addEventListener('mouseover', function() {
+    mano.style.transform = "translateX(120px) translateY(-10px) rotate(45deg)" ;
+});
+socialThree.addEventListener('mouseout', nullPosition);
+
+socialFour.addEventListener('mouseover', function() {
+    mano.style.transform = "translateX(100px) translateY(20px) rotate(50deg)" ;
+});
+socialFour.addEventListener('mouseout', nullPosition);
