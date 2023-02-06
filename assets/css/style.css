@@ -408,15 +408,15 @@ h2 {
     background-image: url('../images/portfolio-progetto-1.jpg');
     background-size: cover;
 }
-.card:nth-child(2) {
+#hacker {
     background-image: url('../images/hacker-news.PNG');
     background-size: cover;
 }
-.card:nth-child(3) {
+#vegetables {
     background-image: url('../images/justVegetables.JPG');
     background-size: cover;
 }
-.card:nth-child(4) {
+#global-warming {
     background-image: url('../images/global-warming.JPG');
     background-size: cover;
 }
