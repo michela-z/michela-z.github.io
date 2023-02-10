@@ -9,7 +9,7 @@
 
 /*   NAVBAR   */
 
-/* .nav-icon {
+.nav-icon {
     display: none;
 }
 
@@ -42,6 +42,7 @@ ul a {
     color: #A1A1A1;
     font-family: 'Poppins';
     font-size: 1.2em;
+    display: none;
 }
 
 .link:hover {
@@ -70,7 +71,8 @@ ul a {
 }
 
 .container-titolo {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     /* border: #00D1FF solid 1px; */
     display: flex;
     justify-content: space-between;
@@ -89,6 +91,7 @@ h1 {
 
 .icona-completa {
     margin-right: 50px;
+    position: relative;
 }
 
 .icon {
@@ -174,7 +177,7 @@ textarea {
     max-width: 1300px;
     width: 90%;
     height: 200px;
-    margin: 50px auto 50px auto;
+    margin: 50px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,7 +206,10 @@ textarea {
 }
 
 .icons a {
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+    text-decoration: none;
 }
 
 .icons i {
@@ -247,12 +253,17 @@ i:hover {
     width: 100%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     .main-container {
         padding-top: 50px;
     }
     .form-container {
         width: 90%;
+    }
+
+    .link {
+        display: inline;
+        text-align: center;
     }
 
     /* NAVBAR */
@@ -315,12 +326,54 @@ i:hover {
         visibility: visible;
     }
 }
-@media screen and (max-width: 400px) {
+@media (max-width: 600px) {
+    /* * {
+        border: solid 1px red;
+    } */
+    .main-container {
+        width: 90%;
+        margin: 30px auto;
+    }
     .form-container {
         height: 500px;
     }
-    .name, .email, .text {
-        display: flex;
+    .container-titolo {
         flex-direction: column;
+        justify-content: center;
+    }
+    .background-contatti {
+        min-width: 200px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    i {
+        margin-left: 0;
+    }
+    .icona-completa {
+        margin-right: 0;
+    }
+    .icon {
+        width: 150px;
+    }
+    .mano {
+        top: 80px;
+        left: 60px;
+        width: 40px;
+        transform: rotate(-20deg);
+    }
+    .email {
+        position: relative;
+    }
+    .email-adrss {
+        position: absolute;
+        top: 60px;
+        visibility: hidden;
+        width: 250px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    .show-email {
+        visibility: visible;
     }
 }
