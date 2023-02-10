@@ -9,7 +9,7 @@
 
 /*   NAVBAR   */
 
-.nav-icon {
+/* .nav-icon {
     display: none;
 }
 
@@ -58,19 +58,53 @@ ul a {
 }
 
 
+
 /* CONTENUTO PAGINA */
 
+.main-container {
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-titolo {
+    width: 500px;
+    /* border: #00D1FF solid 1px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+}
 
 h1 {
     font-family: 'Poppins';
     color: #00D1FF;
-    font-size: 3em;
-    margin-top: 80px;
+    font-size: 4em;
     font-weight: 700;
     text-align: center;
 }
 
-.form-container {
+.icona-completa {
+    margin-right: 50px;
+}
+
+.icon {
+    /* border: #00D1FF solid 1px; */
+    width: 200px;
+}
+
+.mano {
+    position: absolute;
+    top: 90px;
+    left: 150px;
+    width: 60px;
+    transform: rotate(45deg);
+}
+
+/* .form-container {
     margin: auto;
     padding: 70px;
     border-radius: 30px;
@@ -130,6 +164,87 @@ textarea {
 
 #btn-submit:hover {
     background-color: #00D1FF;
+} */ 
+
+/*   CONTATTI   */
+
+.background-contatti {
+    border-radius: 30px;
+    background: #EEFDFF;
+    max-width: 1300px;
+    width: 90%;
+    height: 200px;
+    margin: 50px auto 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-contatti h3 {
+    padding: 20px;
+}
+
+.contact-container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #A1A1A1;
+}
+.contact-container a {
+    width: 50px;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icons a {
+    margin-left: 20px;
+}
+
+.icons i {
+    width: auto;
+}
+
+
+a:link {
+    color: #A1A1A1;
+}
+
+a:visited {
+    color: #A1A1A1;
+}
+
+a:hover {
+    color: #00d0ffea;
+}
+
+i:hover {
+    color: #00d0ffea;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+.email p {
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+.email i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 @media screen and (max-width: 650px) {
