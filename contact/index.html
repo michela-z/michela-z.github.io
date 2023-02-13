@@ -76,7 +76,7 @@
             </div>    
         </div>
 
-        <!-- DISATTIVATO PER EVITARE VIOLAZIONI DELLA PRIVACY -->
+        <!-- DISATTIVATO -->
         <!-- <div class="form-container">
             <form id="contact-form" class="contact-form">
 
@@ -104,32 +104,7 @@
 
     </div>
     
-    <script>
-        // NAVBAR mobile
-        const navbar = document.querySelector(".navbar");
-        const menuBtn = document.querySelector(".menu-btn");
-        const cancelBtn = document.querySelector(".cancel-btn");
-        menuBtn.onclick = ()=>{
-            navbar.classList.add("show");
-            menuBtn.classList.add("hide");
-        }
-        cancelBtn.onclick = ()=>{
-            navbar.classList.remove("show");
-            menuBtn.classList.remove("hide");
-        }
-        window.onscroll = ()=>{
-            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-        }
-        // MOSTRA EMAIL
-        const email = document.querySelector('.far')
-        const emailAddress = document.querySelector('.email-adrss')
-        email.addEventListener('mouseenter', function() {
-            emailAddress.classList.add('show-email');
-        })
-        email.addEventListener('mouseleave', function() {
-            emailAddress.classList.remove('show-email');
-        })
-    </script>
+    <script src="../assets/js/script.js"></script>
 
 </body>
 </html>

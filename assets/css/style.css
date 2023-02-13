@@ -352,6 +352,12 @@ h2 {
     padding: 30px 30px;
 }
 
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
     border: #00D1FF solid 2px;
     width: 150px;
@@ -367,6 +373,16 @@ h2 {
     overflow: hidden;
     background-position: center center;
     position: relative;
+
+    flex-direction: column;
+}
+
+.info {
+    font-family: 'Poppins';
+    color: white;
+    font-weight: 200;
+    z-index: 1;
+    visibility: hidden;
 }
 
 .card::before {
@@ -418,6 +434,10 @@ h2 {
 }
 #global-warming {
     background-image: url('../images/global-warming.JPG');
+    background-size: cover;
+}
+#sushi {
+    background-image: url('../images/sushi.JPG');
     background-size: cover;
 }
 
@@ -695,9 +715,27 @@ h2 {
         justify-content: center;
         align-items: center;
         padding-top: 50px;
-        z-index: 1;
+        z-index: 2;
         visibility: hidden;
     }
+
+    .social .icon {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .nav-left * {
+        padding: 20px 0;
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    .nav-right {
+        align-items: center;
+        justify-content: center;
+    }
+
     .nav.show {
         transition: ease-in 0.2s;
         visibility: visible;
@@ -816,6 +854,38 @@ h2 {
         display: flex;
         flex-direction: column;
     }
+
+    .card-container {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .card-container a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .card {
+        width: 100%;
+        height: 100px;
+        margin: 10px;
+    }
+    .active {
+        height: 150px;
+        width: 100%;
+    }
+    .card-title {
+        visibility: hidden;
+    }
+    .card.active .card-title {
+        visibility: visible;
+    }
+    .info {
+        visibility: visible;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -839,40 +909,5 @@ h2 {
     .box-skills img {
         width: 100%;
         opacity: 1;
-    }
-    .social .icon {
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-    .nav-left * {
-        padding: 20px 0;
-        margin: 0;
-        font-size: 1.8rem;
-    }
-    .nav-right {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .cards {
-        flex-direction: column;
-    }
-    .card {
-        width: 80%;
-        height: 100px;
-        margin: 10px;
-    }
-    .active {
-        height: 150px;
-        width: 100%;
-    }
-    .card-title {
-        visibility: hidden;
-    }
-    .card.active .card-title {
-        visibility: visible;
     }
 }

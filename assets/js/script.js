@@ -11,12 +11,23 @@ cancelBtn.onclick = () => {
     navbar.classList.remove("show");
     menuBtn.classList.remove("hide");
 }
-window.onscroll = () => {
-    this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-}
+// window.onscroll = () => {
+//     this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+// }
+
+
+// MOSTRA EMAIL
+const email = document.querySelector('.far')
+const emailAddress = document.querySelector('.email-adrss')
+email.addEventListener('mouseenter', function() {
+    emailAddress.classList.add('show-email');
+})
+email.addEventListener('mouseleave', function() {
+    emailAddress.classList.remove('show-email');
+})
+
 
 // mouse sulle anteprime 
-
 let cards = document.querySelectorAll('.card');
 const body = document.body;
 
