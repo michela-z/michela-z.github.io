@@ -29,20 +29,35 @@ email.addEventListener('mouseleave', function() {
 
 // mouse sulle anteprime 
 let cards = document.querySelectorAll('.card');
+let info = document.querySelectorAll('.info')
+
 const body = document.body;
 
 cards.forEach(card => {
-    card.addEventListener('mouseover', () => {
-        removeActive()
+    card.addEventListener('mouseover', (event) => {
+        //removeActive()
         card.classList.add('active')
+        //console.log('active');
+        event.target.childNodes[3].style.display = 'inline'      
     })
 });
 
-const removeActive = () => {
-    cards.forEach(card => {
-        card.classList.remove('active')
+cards.forEach(card => {
+    card.addEventListener('mouseleave', (event) => {
+        //console.log('mouse leave');
+        //console.log(event.target);
+        event.target.classList.remove('active')
+        info.forEach(i => {
+            i.style.display = "none"
+        })
     })
-}
+})
+
+// const removeActive = () => {
+//     cards.forEach(card => {
+//         card.classList.remove('active')
+//     })
+// }
 
 
 // MANO PUNTATORE

@@ -379,10 +379,11 @@ h2 {
 
 .info {
     font-family: 'Poppins';
-    color: white;
+    color: #fff;
     font-weight: 200;
     z-index: 1;
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
 }
 
 .card::before {
@@ -411,7 +412,7 @@ h2 {
 
 .card-title {
     transform: rotate(90deg);
-    transition: transform .3s ease;
+    transition: transform .2s ease-in;
     font-weight: 600;
     font-size: 1.2rem;
     text-transform: uppercase;
