@@ -1,73 +1,29 @@
-//  NAVBAR MOBILE MODE
-let navbar = document.querySelector("#navbar");
-const menuBtn = document.querySelector(".menu-btn");
-const cancelBtn = document.querySelector(".cancel-btn");
+$(document).ready(function (){
 
-menuBtn.onclick = () => {
-    navbar.classList.add("show");
-    menuBtn.classList.add("hide");
-}
-cancelBtn.onclick = () => {
-    navbar.classList.remove("show");
-    menuBtn.classList.remove("hide");
-}
-// window.onscroll = () => {
-//     this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-// }
-
-
-// MOSTRA EMAIL
-const email = document.querySelector('.far')
-const emailAddress = document.querySelector('.email-adrss')
-email.addEventListener('mouseenter', function() {
-    emailAddress.classList.add('show-email');
-})
-email.addEventListener('mouseleave', function() {
-    emailAddress.classList.remove('show-email');
-})
-
-
-// mouse sulle anteprime 
-let cards = document.querySelectorAll('.card');
-let info = document.querySelectorAll('.info')
-
-const body = document.body;
-
-cards.forEach(card => {
-    card.addEventListener('mouseover', (event) => {
-        //removeActive()
-        card.classList.add('active')
-        //console.log('active');
-        event.target.childNodes[3].style.display = 'inline'      
+    //mobile navbar
+    $(".menu-btn").click(function(){
+        $(".nav").addClass("show");
     })
+    $(".cancel-btn").click(function(){
+        $(".nav").removeClass("show");
+    })
+
+    //mouse sulle anteprime
+    $('.card').on({
+        mouseover: function(){
+            $(this).addClass("active").find('.info').show();
+        },
+        mouseleave: function(){
+            $(this).removeClass("active").find('.info').hide();
+        }
+    })
+
 });
 
-cards.forEach(card => {
-    card.addEventListener('mouseleave', (event) => {
-        //console.log('mouse leave');
-        //console.log(event.target);
-        event.target.classList.remove('active')
-        info.forEach(i => {
-            i.style.display = "none"
-        })
-    })
-})
 
-// const removeActive = () => {
-//     cards.forEach(card => {
-//         card.classList.remove('active')
-//     })
-// }
+// NIMAZIONE MANO SULL'INDICE
+let mano = document.querySelector('.mano')
 
-
-// MANO PUNTATORE
-let containerImage = document.querySelector('.image');
-let mano = document.createElement('img');
-mano.src = 'assets/images/mano.png'
-mano.className = 'mano';
-containerImage.append(mano);
-
-//let navOne = document.querySelector('.nav-1');
 let navOne = document.querySelector('.nav-1');
 let navTwo = document.querySelector('.nav-2');
 let navThree = document.querySelector('.nav-3');
@@ -83,7 +39,6 @@ function nullPosition() {
 }
 
 // NAV BAR LEFT     
-
 navOne.addEventListener('mouseover', function() {
     mano.style.transform = "translateX(-180px) translateY(-50px) rotate(-50deg)" ;
 });
@@ -101,7 +56,6 @@ navThree.addEventListener('mouseout', nullPosition);
 
 
 // NAV BAR RIGHT
-
 socialOne.addEventListener('mouseover', function() {
     mano.style.transform = "translateX(140px) translateY(-90px) rotate(30deg)" ;
 });
